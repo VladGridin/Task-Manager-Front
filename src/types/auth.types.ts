@@ -19,4 +19,8 @@ export interface IAuthResponse {
 	user: IUser
 }
 
+export interface IGoogleFirebase {
+	UserId: string
+}
+
 export type TypeUserForm = Omit<IUser, 'id'> & { password?: string }
