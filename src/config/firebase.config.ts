@@ -15,4 +15,4 @@ export const app = initializeApp(firebaseConfig)
 // export const analytics = getAnalytics(app)
 
 export const googleAuthProvider = new GoogleAuthProvider()
-googleAuthProvider.addScope(`${process.env.NEXT_PUBLIC_ENV_FIREBASE_SCOPES}`)
+// googleAuthProvider.addScope(`${process.env.NEXT_PUBLIC_ENV_FIREBASE_SCOPES}`)

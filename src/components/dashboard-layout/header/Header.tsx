@@ -1,5 +1,3 @@
-import React from 'react'
-
 import { GlobalLoader } from './GlobalLoader'
 import { Profile } from './profile/Profile'
 

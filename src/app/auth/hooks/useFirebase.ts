@@ -3,6 +3,7 @@
 import { useMutation } from '@tanstack/react-query'
 import { getAuth, getIdToken, signInWithPopup, signOut } from 'firebase/auth'
 import { useRouter } from 'next/navigation'
+import { useState } from 'react'
 import { toast } from 'sonner'
 
 import { IGoogleFirebase } from '@/types/auth.types'
@@ -13,6 +14,7 @@ import { DASHBOARD_PAGES } from '@/config/pages-url.config'
 import { authService } from '@/services/auth.service'
 
 export const AuthByFirebase = () => {
+	const [userToken, setUserToken] = useState('')
 	const auth = getAuth(app)
 	auth.languageCode = 'it'
 
@@ -32,6 +34,8 @@ export const AuthByFirebase = () => {
 			.then(res =>
 				getIdToken(res.user)
 					.then(data => {
+						console.log(data)
+						setUserToken(data)
 						mutate({
 							UserId: data
 						})

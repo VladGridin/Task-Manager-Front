@@ -2,6 +2,7 @@
 
 import { SubmitHandler, useForm } from 'react-hook-form'
 
+import { UserImg } from '@/components/ui/avatar/Avatar'
 import { Button } from '@/components/ui/buttons/Button'
 import { Field } from '@/components/ui/fields/Field'
 
@@ -14,7 +15,6 @@ export default function Settings() {
 	const { register, handleSubmit, reset } = useForm<TypeUserForm>({
 		mode: 'onChange'
 	})
-
 	useInitialData(reset)
 	const { isPending, mutate } = useUpdateSettings()
 
@@ -28,6 +28,11 @@ export default function Settings() {
 
 	return (
 		<div>
+			<UserImg
+				id='UserAvatar settings'
+				extra='w-24 h-24'
+				disabled={false}
+			/>
 			<form
 				className='w-2/4'
 				onSubmit={handleSubmit(onSubmit)}
@@ -77,7 +82,7 @@ export default function Settings() {
 							extra='mb-4'
 							{...register('breakInterval', { valueAsNumber: true })}
 						/>
-                        <Field
+						<Field
 							id='intervalsCount'
 							label='Intervals interval (max):'
 							placeholder='Enter intervals interval (max):'
