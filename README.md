@@ -58,3 +58,5 @@ Open [http://localhost:3000/i](http://localhost:3000/i) with your browser to see
 - Frontend: Next js, TailwindCss, Sass, firebase, react day picker, lucide icon, dayjs, axios, dnd kit, tanstack query, sonner
 - Backend: Nest js, passport jwt, firebase admin, argon, prisma
 - Database: PostgreSQL
+
+Made by Vlad Gridin according to the [youtube](https://youtu.be/-7K_0NRLCu4?si=w-Uhl0cq5BUd2ThP) tutorial
