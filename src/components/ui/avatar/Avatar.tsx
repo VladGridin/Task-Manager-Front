@@ -40,7 +40,8 @@ export const UserImg = ({ disabled, extra, id }: IUseImage) => {
 			>
 				{isLoading ? (
 					<Loader />
-				) : data?.user.userAvatar === undefined ? (
+				) : data?.user.userAvatar === undefined ||
+				  data?.user.userAvatar === null ? (
 					<p>{data?.user.name?.charAt(0) || 'A'}</p>
 				) : (
 					<Image

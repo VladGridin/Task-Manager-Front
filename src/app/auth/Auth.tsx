@@ -45,27 +45,20 @@ export default function Auth() {
 					</div>
 				</form>
 
-				<div className='flex pt-5 items-center gap-5 justify-center'>
-					<button onClick={() => googleAuth()}>
-						<Image
-							src='/icons/GoogleIcon.svg'
-							width={40}
-							height={40}
-							alt='auth by github'
-							priority
-						/>
-					</button>
+				<div className='flex pt-5 items-center justify-center'>
 					<button
-						className=''
-						onClick={() => setIsLoginForm(false)}
+						className='w-9/12 h-12  border rounded-xl border-primary flex items-center'
+						onClick={() => googleAuth()}
 					>
 						<Image
-							width={40}
-							height={40}
-							src={'/icons/GitHubIcon.svg'}
-							alt='auth by github'
+							src='/icons/GoogleIcon.svg'
+							// className='pl-5'
+							width={50}
+							height={50}
+							alt='auth by google'
 							priority
 						/>
+						<p className='justify-center mx-auto'>Sign in with Google</p>
 					</button>
 				</div>
 			</div>

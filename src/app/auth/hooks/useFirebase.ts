@@ -31,7 +31,8 @@ export const AuthByFirebase = () => {
 
 	const googleAuth = () => {
 		signInWithPopup(auth, googleAuthProvider)
-			.then(res =>
+			.then(res => {
+				console.log(res)
 				getIdToken(res.user)
 					.then(data => {
 						console.log(data)
@@ -41,7 +42,7 @@ export const AuthByFirebase = () => {
 						})
 					})
 					.catch(err => console.log(err))
-			)
+			})
 			.catch(err => {
 				console.log(err)
 			})
